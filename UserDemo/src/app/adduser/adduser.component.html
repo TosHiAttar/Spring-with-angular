@@ -1,0 +1,40 @@
+
+<br>
+
+<h2>Enter User</h2>
+<br>
+<form #userForm="ngForm" (ngSubmit)="save(userForm)">
+
+    <div class="md-form">
+        
+        <input type="number" class="form-control" name="id" #id="ngModel" [(ngModel)]="userService.id"  mdbActive  required>
+        <label for="defaultForm-pass">User Id</label>  
+     </div>
+
+     <div class="md-form">
+        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="userService.name"  mdbActive  required>
+        <label for="defaultForm-pass">User Name</label>  
+     </div>
+
+     <div class="md-form">
+        <input type="email" class="form-control" name="email" #email="ngModel" [(ngModel)]="userService.email"  mdbActive  required>
+        <label for="defaultForm-pass">User Email</label>  
+     </div>
+
+
+
+     <div class="md-form">
+        <input type="number" class="form-control" name="number" #number="ngModel" [(ngModel)]="userService.number"  mdbActive  required>
+        <label for="defaultForm-pass">Mobile Number</label>  
+     </div>
+
+     <div class="md-form-group">
+        <button class="btn btn-primary" type="submit" >
+          <i class="fa fa-floppy-o"></i>
+          Submit</button>
+        <button class="btn btn-elegant" type="reset"   >
+          <i class="fa fa-refresh"></i>
+          Reset</button>
+      </div>
+
+</form>
